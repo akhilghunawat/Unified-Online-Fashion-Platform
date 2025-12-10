@@ -9,7 +9,8 @@ const AddProduct = () => {
     image: '',
     category: 'Women',
     new_Price: '',
-    old_Price: ''
+    old_Price: '',
+    stock: ''
   });
 
   const imageHandler = (e) => {
@@ -107,6 +108,18 @@ const AddProduct = () => {
           <option value="Men">Men</option>
           <option value="kid">kid</option>
         </select>
+      </div>
+
+      <div className="addproduct-itemfield">
+        <p>Stock Quantity</p>
+        <input
+          value={productDetails.stock}
+          onChange={changeHandler}
+          type="number"
+          name="stock"
+          placeholder="Enter stock quantity"
+          min="0"
+        />
       </div>
 
       <div className="add-product-itemfield">
